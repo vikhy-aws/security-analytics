@@ -480,7 +480,7 @@ public class DetectorTrigger implements Writeable, ToXContentObject {
                         new Script(ScriptType.INLINE, Script.DEFAULT_TEMPLATE_LANG, subjectTemplate, Collections.emptyMap()),
                         new Script(ScriptType.INLINE, Script.DEFAULT_TEMPLATE_LANG, messageTemplate, Collections.emptyMap()),
                         action.getThrottleEnabled(), action.getThrottle(),
-                        action.getId(), action.getActionExecutionPolicy());
+                        action.getId(), action.getActionExecutionPolicy(), action.getTimezone());
 
                 transformedActions.add(transformedAction);
             }

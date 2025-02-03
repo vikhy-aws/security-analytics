@@ -897,7 +897,7 @@ public class TestHelpers {
                 "  - Severity: {{ctx.trigger.severity}}", null);
         Boolean throttleEnabled = false;
         Throttle throttle = randomThrottle(null, null);
-        return new Action(name, destinationId, template, template, throttleEnabled, throttle, OpenSearchRestTestCase.randomAlphaOfLength(10), null);
+        return new Action(name, destinationId, template, template, throttleEnabled, throttle, OpenSearchRestTestCase.randomAlphaOfLength(10), null, "UTC");
     }
 
     public static Action randomThreatInteMonitorAction(String destinationId) {
@@ -907,7 +907,7 @@ public class TestHelpers {
                 "  - Severity: {{ctx.trigger.severity}}", null);
         Boolean throttleEnabled = false;
         Throttle throttle = randomThrottle(null, null);
-        return new Action(name, destinationId, template, template, throttleEnabled, throttle, OpenSearchRestTestCase.randomAlphaOfLength(10), null);
+        return new Action(name, destinationId, template, template, throttleEnabled, throttle, OpenSearchRestTestCase.randomAlphaOfLength(10), null, "UTC");
     }
 
     public static Script randomTemplateScript(String source, Map<String, Object> params) {
